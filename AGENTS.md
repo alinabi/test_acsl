@@ -40,3 +40,6 @@ Whenever you add or modify C source or header files:
 - **Never** use `bear` on macOS; always rely on `compiledb -n make -B` as configured in the `Makefile`.
 - **Never** use `setjmp`, `longjmp`, or global variables
 - **Never** weaken or delete existing ACSL `ensures` or `requires` clauses just to make `WP` pass unless the functional specification itself has changed.
+- **Always** when a repository’s documentation and its existing code disagree, follow the conventions used
+in the existing code, and in your final reply point out each inconsistency you found between the
+documentation and the code.
