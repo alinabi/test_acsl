@@ -1,0 +1,24 @@
+# Compiled binaries and object files
+*.o
+*.a
+*.so
+*.dylib
+app
+
+# Compilation database (regenerated per OS via `make compile_commands.json`)
+compile_commands.json
+
+# Frama-C temporary files and GUI session artifacts
+.frama-c/
+*.sav
+*.parse.sav
+frama-c-rte.c
+
+# Personal AI agent local overrides
+AGENTS.override.md
+.claude/settings.local.json
+
+# macOS and Linux OS files
+.DS_Store
+*~
+*.swp
