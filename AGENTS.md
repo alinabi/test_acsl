@@ -33,9 +33,10 @@ Whenever you add or modify C source or header files:
 - **ACSL Placement:** Place public function contracts (`requires`, `assigns`, `ensures`) in `.h` header files above declarations so callers and `WP` can verify modularly.
 - **Loop Annotations:** Every `for` and `while` loop must include explicit `loop invariant`, `loop assigns`, and `loop variant` clauses so `WP` can prove termination and state preservation.
 - **Memory & Pointers:** Explicitly specify `\valid`, `\valid_read`, and `\separated` preconditions for all pointer parameters.
+- **C File Structure** Do not implement more than one function in the same C file; name the file after the function it implements.
 
 ## Hard Boundaries
 - **Never** edit `compile_commands.json` by hand; always regenerate it via `make compile_commands.json` when files or flags change.
 - **Never** use `bear` on macOS; always rely on `compiledb -n make -B` as configured in the `Makefile`.
-- **Never** implement more than one function in the same C file; name each file after the function implemented in it.
+- **Never** use `setjmp`, `longjmp`, or global variables
 - **Never** weaken or delete existing ACSL `ensures` or `requires` clauses just to make `WP` pass unless the functional specification itself has changed.
